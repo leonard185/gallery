@@ -3,7 +3,7 @@ pipeline {
 
 
      environment {
-        RENDER_URL = 'https://gallery-jz73.onrender.com'   // your Render app link
+        RENDER_URL = 'https://gallery-8uvm.onrender.com'   // your Render app link
         SLACK_WEBHOOK_URL = credentials('slack-webhook')
     }
     
