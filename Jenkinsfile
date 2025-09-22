@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+
+     environment {
+        RENDER_URL = 'https://gallery-jz73.onrender.com'   // your Render app link
+        SLACK_WEBHOOK_URL = credentials('slack-webhook')
+    }
+    
+
     stages {
         stage('Checkout') {
             steps {
