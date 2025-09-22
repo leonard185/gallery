@@ -48,3 +48,15 @@ pipeline {
         }
     }
 }
+     stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+            post {
+                failure {
+                    mail to: 'leonard.kiragu1@student.moringaschool.com',
+                         subject: "❌ Tests Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                         body: "Check Jenkins for details: ${env.BUILD_URL}"
+                }
+            }
+        }
